@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "studyphysical",
+  "main": "worker.js",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [{ "binding": "DB", "database_name": "study-hub-db" }],
+  "r2_buckets": [{ "binding": "BUCKET", "bucket_name": "study-hub-files" }],
+  "vars": {
+    "INITIAL_OWNER_USERNAME": "heng",
+    "INITIAL_OWNER_NAME": "Heng"
+  }
+}
